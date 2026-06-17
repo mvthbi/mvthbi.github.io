@@ -290,6 +290,24 @@
     .sk-list li:last-child { border-bottom: none; }
     .sk-list li::before { content: '>'; font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--accent); flex-shrink: 0; }
 
+    /* ── WRITING ── */
+    #writing { background: var(--surface); }
+    .writing-list { display:flex; flex-direction:column; }
+    .post-row {
+      display:grid; grid-template-columns:120px 1fr auto;
+      align-items:start; gap:2rem; padding:2rem 0;
+      border-bottom:1px solid var(--border-soft); cursor:pointer;
+      transition:padding-left .25s;
+    }
+    .post-row:first-child { border-top:1px solid var(--border-soft); }
+    .post-row:hover { padding-left:.5rem; }
+    .post-row:hover .post-title { color:var(--accent); }
+    .post-row:hover .post-arrow { transform:translateX(4px); color:var(--accent); }
+    .post-cat { font-family:'Space Mono',monospace; font-size:.62rem; color:var(--accent); padding-top:4px; }
+    .post-title { font-family:'Space Mono',monospace; font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:.4rem; line-height:1.45; transition:color .25s; }
+    .post-excerpt { font-size:.88rem; font-weight:300; color:var(--text-light); line-height:1.6; }
+    .post-arrow { font-family:'Space Mono',monospace; font-size:1rem; color:var(--text-light); transition:transform .25s, color .25s; padding-top:3px; }
+
     /* ── CONTACT ── */
     #contact { background: var(--bg); }
     .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; }
@@ -373,6 +391,7 @@
     <ul class="nav-links">
       <li><a href="#about">about</a></li>
       <li><a href="#experience">experience</a></li>
+      <li><a href="#writing">writing</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </nav>
@@ -555,6 +574,25 @@
         <div class="sk-card reveal d1"><div class="sk-emoji">📊</div><div class="sk-title">Analytics & BI</div><ul class="sk-list"><li>Tableau · Looker</li><li>Metrics definition & governance</li><li>Self-serve analytics design</li><li>Product & revenue data</li><li>Stakeholder translation</li></ul></div>
         <div class="sk-card reveal d2"><div class="sk-emoji">🤖</div><div class="sk-title">AI & Emerging</div><ul class="sk-list"><li>Semantic layer design</li><li>NL-to-SQL agent development</li></ul></div>
         <div class="sk-card reveal d3"><div class="sk-emoji">🌱</div><div class="sk-title">Soft Skills</div><ul class="sk-list"><li>Stakeholder communication</li><li>Cross-functional partnership</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal"><span class="eyebrow-prompt">~/writing $</span><span class="eyebrow-text">cat thoughts.md</span></div>
+      <h2 class="section-h2 reveal">Writing</h2>
+      <p class="section-lead reveal">On data, career, and life as an Indonesian woman building something in Europe.</p>
+      <div class="writing-list">
+        <a href="writing/parental-leave.html" class="post-row reveal" style="text-decoration:none;color:inherit;">
+          <div class="post-cat">Career · Life</div>
+          <div>
+            <div class="post-title">Returning to Work After a Year of Parental Leave</div>
+            <div class="post-excerpt">The fear, the welcome, the AI tools, and the irony that none of it made me less needed. An honest account of the first four weeks back.</div>
+          </div>
+          <div class="post-arrow">→</div>
+        </a>
       </div>
     </div>
   </section>
